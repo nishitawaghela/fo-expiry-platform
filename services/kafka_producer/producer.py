@@ -133,7 +133,7 @@ def publish_batch(producer: Producer, records: list, batch_id: str):
 def main():
     logger.info("Starting F&O Expiry Analytics Producer...")
 
-    # Create topic if it doesn't exist
+    # Create kafka topic if it doesn't exist
     create_topic_if_not_exists(KAFKA_BOOTSTRAP_SERVERS, TOPIC_NAME)
 
     # Initialize producer
