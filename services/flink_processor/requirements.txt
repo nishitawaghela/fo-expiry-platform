@@ -1,0 +1,6 @@
+confluent-kafka==2.4.0
+deltalake==0.17.4
+psycopg2-binary==2.9.9
+python-dotenv==1.0.1
+pandas==2.2.2
+pyarrow==15.0.2
