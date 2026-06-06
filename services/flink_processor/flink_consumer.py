@@ -243,7 +243,7 @@ def process_batch(batch_id: str, records: list):
     # 7. Cache to Redis
     import sys
     sys.path.append(os.path.join(os.path.dirname(__file__), '../../services/fastapi_app'))
-    from cache import cache_latest_metrics, cache_live_chain, cache_anomalies
+    from services.fastapi_app.cache import cache_latest_metrics, cache_live_chain, cache_anomalies
 
     cache_latest_metrics(metrics)
     cache_live_chain(records)
