@@ -250,7 +250,7 @@ def process_batch(batch_id: str, records: list):
 
     # 8. Run anomaly detection
     sys.path.append(os.path.join(os.path.dirname(__file__)))
-    from anomaly_detector import run_anomaly_detection
+    from services.fastapi_app.anomaly_detector import run_anomaly_detection
     anomalies = run_anomaly_detection()
     cache_anomalies(anomalies)
 
