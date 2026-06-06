@@ -239,6 +239,20 @@ def process_batch(batch_id: str, records: list):
     write_to_delta_lake(records, batch_id)
     write_to_postgres(records, metrics)
 
+    # 7. Cache to Redis
+    import sys
+    sys.path.append(os.path.join(os.path.dirname(__file__), '../../services/fastapi_app'))
+    from cache import cache_latest_metrics, cache_live_chain, cache_anomalies
+
+    cache_latest_metrics(metrics)
+    cache_live_chain(records)
+
+    # 8. Run anomaly detection
+    sys.path.append(os.path.join(os.path.dirname(__file__)))
+    from anomaly_detector import run_anomaly_detection
+    anomalies = run_anomaly_detection()
+    cache_anomalies(anomalies)
+
     logger.info(f"Batch {batch_id} complete.\n")
 
 
