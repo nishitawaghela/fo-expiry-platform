@@ -6,7 +6,7 @@
 
 ---
 
-## 🧠 The Problem
+##  The Problem
 
 Every Thursday, NSE F&O contracts expire. Before market opens at 9:15 AM, derivatives traders and analysts need to answer three questions:
 
@@ -20,7 +20,7 @@ This platform automates the entire workflow in real time.
 
 ---
 
-## ✅ What It Does
+##  What It Does
 
 - **Ingests** live NSE Nifty options chain data every 60 seconds (212 records across 101 strikes)
 - **Computes** OI shift, Put-Call Ratio, and Max Pain continuously as data arrives
@@ -31,7 +31,7 @@ This platform automates the entire workflow in real time.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 NSE India (live F&O chain)
@@ -64,7 +64,7 @@ Streamlit Dashboard (live)
 
 ---
 
-## 📊 Live Dashboard
+##  Live Dashboard
 
 The Streamlit dashboard reads directly from Supabase PostgreSQL and shows:
 
@@ -75,7 +75,7 @@ The Streamlit dashboard reads directly from Supabase PostgreSQL and shows:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 fo-expiry-platform/
@@ -104,7 +104,7 @@ fo-expiry-platform/
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer | Tools |
 |---|---|
@@ -121,7 +121,7 @@ fo-expiry-platform/
 
 ---
 
-## 📈 Key Metrics (Measured)
+## Key Metrics (Measured)
 
 | Metric | Value |
 |---|---|
@@ -135,7 +135,7 @@ fo-expiry-platform/
 
 ---
 
-## 🚀 Running Locally
+##  Running Locally
 
 **Prerequisites:** Python 3.12, Docker
 
@@ -175,7 +175,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 💡 Financial Context
+##  Financial Context
 
 **Open Interest (OI)** — Total outstanding contracts at each strike. High OI acts as a gravitational magnet — the market tends to close near high OI strikes on expiry day.
 
@@ -187,7 +187,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 📋 API Endpoints
+##  API Endpoints
 
 ```
 GET /health           — Service health check
