@@ -137,17 +137,11 @@ div[data-testid="stMetric"] { display: none; }
 
 
 # ── DB connection ─────────────────────────────────────────────────────────────
-@st.cache_resource
+
 @st.cache_resource
 def get_connection():
-    return psycopg2.connect(
-        host=st.secrets["DB_HOST"],
-        dbname=st.secrets["DB_NAME"],
-        user=st.secrets["DB_USER"],
-        password=st.secrets["DB_PASSWORD"],
-        port=st.secrets["DB_PORT"],
-        sslmode="require"
-    )
+    db_url = st.secrets["DATABASE_URL"]
+    return psycopg2.connect(db_url, sslmode="require")
 
 
 def fetch(query: str) -> list:
