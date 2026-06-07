@@ -1,4 +1,4 @@
-# ⚡ Futures & Options Expiry Analytics Platform
+# Futures & Options Expiry Analytics Platform
 
 > Real-time NSE F&O expiry intelligence — automated OI analysis, PCR tracking, max pain computation, and pre-market Excel reporting. Every Thursday, automatically.
 
