@@ -121,7 +121,7 @@ fo-expiry-platform/
 
 ---
 
-## Key Metrics (Measured)
+## Key Metrics 
 
 | Metric | Value |
 |---|---|
