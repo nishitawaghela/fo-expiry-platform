@@ -27,4 +27,4 @@ select
     end as is_max_pain_strike
 from oi_by_strike obs
 cross join latest_metrics lm
-order by obs.total_oi desc
+order by (obs.ce_oi + obs.pe_oi) desc
